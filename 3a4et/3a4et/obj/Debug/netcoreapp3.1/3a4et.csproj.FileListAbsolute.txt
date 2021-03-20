@@ -1,0 +1,3 @@
+C:\Users\Artexa\source\repos\3a4et\3a4et\obj\Debug\netcoreapp3.1\3a4et.csprojAssemblyReference.cache
+C:\Users\Artexa\source\repos\3a4et\3a4et\obj\Debug\netcoreapp3.1\3a4et.AssemblyInfoInputs.cache
+C:\Users\Artexa\source\repos\3a4et\3a4et\obj\Debug\netcoreapp3.1\3a4et.AssemblyInfo.cs
