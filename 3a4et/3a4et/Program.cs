@@ -6,75 +6,89 @@ namespace _3a4et
 
     class Fors
     {
-        public void for12()
+        static void for12()
         {
-            double p = 1;
+            float p = 1;
             int N = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter N:");
 
             for (int i = 1; i <= N; i++)
             {
                 p = p * (1 + 0.1 * i);
             }
+            Console.WriteLine(p);
         }
         
-        public void for20()
+        static void for20()
         {
             int N = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter N:");
             float n1 = 1;
-            float rez = 0;
+            float res = 0;
             
 
             for (int i = 1; i <= N; i++)
             {
                 n1 *= (float)i;
-                rez += n1;
+                res += n1;
             }
+            Console.WriteLine(res);
         }
 
-        public void for34()
+        static void for34()
         {
-            int n = Convert.ToInt32(Console.ReadLine());
-
-            float a1 = 1, a2 = 2;
-
-            int i;
-            float ak;
+            int N = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter N:");
+            double a1 = double.Parse(Console.ReadLine());
+            double a2 = double.Parse(Console.ReadLine());
             for (i = 3; i <= n; ++i)
             {
-                ak = (a1 + 2 * a2) / 3;
+                double ak = (a1 + 2 * a2) / 3;
                 a1 = a2;
                 a2 = ak;
+                Console.WriteLine(ak);
             }
             return;
         }
     }
+    
     class Whiles
     {
-        public void while4()
+        
+        static void while4()
         {
-            int a = Convert.ToInt32(Console.ReadLine());
-            while (a > 0) a -= 3;
-            if (a == 0)
+            int N = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter N:");
+            while (N > 0)
+            { 
+                N /= 3;
+            }
+            
+            if (N == 0)
             {
-                Console.WriteLine("Y");
+                Console.WriteLine("True");
             }
             else
             {
-                Console.WriteLine("N");
+                Console.WriteLine("False");
             }
         }
-        public void while12()
+        
+        static void while12()
         {
-            int n = Convert.ToInt32(Console.ReadLine());
-            int k = 0, temp = 0;
-            while (!(temp + k + 1 > n))
+            int N = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter N:");
+            int k = 0, temp = 1;
+            while (k <= N)
             {
-                ++k;
                 temp += k;
+                k++;
             }
             return;
+            Console.WriteLine();
         }
-        public void while23()
+        
+        static void while23() //я тут затупил
         {
             int a = Convert.ToInt32(Console.ReadLine());
             int b = Convert.ToInt32(Console.ReadLine());
@@ -84,42 +98,47 @@ namespace _3a4et
                 else b = b % a;
             }
             return;
+            Console.WriteLine();
         }
 
     }
+    
     class all_b
     {
-        public void series21()
+        
+        static void Series21()
         {
-            int n, d = 0, k = 0, b = -1;
-            float a = float.Parse(Console.ReadLine());
-            for (int i = 1; i <= n; i++)
+            int n = int.Parse(Console.ReadLine());
+            double[] array = new double[n];
+            for (int i = 0; i < n; i++)
+                array[i] = double.Parse(Console.ReadLine());
+
+            for (int i = 1; i < N; i++)
             {
-                if (a > d && d != 0) k++;
-                d = a;
-                b++;
+                if (array[i] < array[i - 1])
+                {
+                    Console.WriteLine("False");
+                    return;
+                }
             }
-            if (k == b)
+
+            Console.WriteLine("True");
+        }
+        
+        static void proc52(int year)
+        {
+            if (year % 4 != 0 && year % 100 != 0 || year % 400 == 0)
             {
-                Console.WriteLine("Y");
+                return true;
             }
             else
             {
-                Console.WriteLine("N");
-            }
-            return;
-        }
-        public void proc52()
-        {
-            int year;
-            if (year % 4 != 0 && year % 100 != 0 || year % 400 == 0)
-            {
-                return;
+                return false;
             }
             return;
         }
         
-        public void minmax12()
+        static void minmax12()
         {
             int n = int.Parse(Console.ReadLine());
             int[] N = new int[n];
@@ -147,24 +166,9 @@ namespace _3a4et
             return 0;
         }
         
-        public void array16()
+        static void array16()
         {
-            int n = Convert.ToInt32(Console.ReadLine());
-            int arr = Convert.ToInt32(Console.ReadLine());
-            for (int i = 0; i < n; ++i)
-            {
-                arr = 1 % 90 + 10;
-            }
-            for (int i = 0; i < n / 2; ++i)
-            {
-                int ar1 = n - 1 - i;
 
-            }
-            if (n % 2 != 0)
-            {
-                int ar2 = (n / 2);
-            }
-            return;
         }
         public void array47()
         {
