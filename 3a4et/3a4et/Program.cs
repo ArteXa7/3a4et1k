@@ -8,7 +8,7 @@ namespace _3a4et
     {
         static void for12()
         {
-            float p = 1;
+            double p = 1;
             int N = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter N:");
 
@@ -41,7 +41,8 @@ namespace _3a4et
             Console.WriteLine("Enter N:");
             double a1 = double.Parse(Console.ReadLine());
             double a2 = double.Parse(Console.ReadLine());
-            for (i = 3; i <= n; ++i)
+            int i;
+            for (i = 3; i <= N; ++i)
             {
                 double ak = (a1 + 2 * a2) / 3;
                 a1 = a2;
@@ -108,9 +109,9 @@ namespace _3a4et
         
         static void Series21()
         {
-            int n = int.Parse(Console.ReadLine());
-            double[] array = new double[n];
-            for (int i = 0; i < n; i++)
+            int N = Convert.ToInt32(Console.ReadLine());
+            double[] array = new double[N];
+            for (int i = 0; i < N; i++)
                 array[i] = double.Parse(Console.ReadLine());
 
             for (int i = 1; i < N; i++)
@@ -124,17 +125,13 @@ namespace _3a4et
 
             Console.WriteLine("True");
         }
-        
-        static void proc52(int year)
+        static void proc52()
         {
+            int year;
             if (year % 4 != 0 && year % 100 != 0 || year % 400 == 0)
-            {
                 return true;
-            }
             else
-            {
                 return false;
-            }
             return;
         }
         
@@ -146,9 +143,9 @@ namespace _3a4et
             {
                 N[i] = int.Parse(Console.ReadLine());
             }      
-        Console.WriteLine(CalculateMinInt(N));
+        Console.WriteLine(Min(N));
         }
-        static int CalculateMinInt(int[] nums)
+        static int Min(int[] nums)
         {
             int min;
             min = nums[0];
@@ -168,11 +165,27 @@ namespace _3a4et
         
         static void array16()
         {
-
+           // - 
         }
         public void array47()
         {
-
+            int temp;
+            int[] arr = new int[];
+            int rez = 5;
+            
+            for (i = 0; i < 9; i++)
+            {
+                for (int j = i-1; j >= 0; j++)
+                {
+                    if(arr[i] == arr[j]
+                    {
+                        rez++;
+                        break;
+                    }
+                
+                }
+            
+            }
         }
         public void array68()
         {
