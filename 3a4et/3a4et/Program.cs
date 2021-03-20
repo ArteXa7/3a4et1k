@@ -121,9 +121,32 @@ namespace _3a4et
         
         public void minmax12()
         {
-
+            int n = int.Parse(Console.ReadLine());
+            int[] N = new int[n];
+            for (int i = 0; i < n; i++)
+            {
+                N[i] = int.Parse(Console.ReadLine());
+            }      
+        Console.WriteLine(CalculateMinInt(N));
         }
-    
+        static int CalculateMinInt(int[] nums)
+        {
+            int min;
+            min = nums[0];
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (nums[i] < min)
+                {
+                    min = nums[i];
+                }
+            }
+            if (min < 0)
+                return 0;
+            else
+                return min;
+            return 0;
+        }
+        
         public void array16()
         {
             int n = Convert.ToInt32(Console.ReadLine());
